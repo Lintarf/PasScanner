@@ -13,6 +13,12 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+      },
+      server: {
+        headers: {
+          // Set proper MIME types for TypeScript files
+          'Content-Type': 'application/javascript; charset=utf-8'
+        }
       }
     };
 });
